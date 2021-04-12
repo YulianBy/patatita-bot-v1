@@ -20,18 +20,14 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content.startsWith(prefix+"help")) {
-        let ping = Math.floor(message.client.ws.ping);
-        message.channel.send('𝐀𝐂𝐓𝐔𝐀𝐋𝐌𝐄𝐍𝐓𝐄 𝐌𝐄 𝐄𝐍𝐂𝐔𝐄𝐍𝐓𝐑𝐎 𝐄𝐍 𝐃𝐄𝐒𝐀𝐑𝐑𝐎𝐋𝐋𝐎'); 
-
+        message.channel.send('**AÚN ESTOY EN DESARROLLO, PROGRAMADORES TRABAJANDO EN MI**'); 
     }
 
 });
 
-client.on('message', message => {
-    if (message.content.startsWith(prefix+"tiktok")) {
-        let ping = Math.floor(message.client.ws.ping);
-        message.channel.send('El tik tok de Melany lo puedes encontrar acá: https://www.tiktok.com/@mel_any05?lang=es'); 
-
+client.on("message", (message) => {
+    if(message.content.startsWith(prefix+"help")) {
+      message.channel.send("Puedes encontrar a Mel en tiktok acá: https://www.tiktok.com/@mel_any05?lang=es");
     }
 
 });
