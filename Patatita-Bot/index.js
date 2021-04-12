@@ -18,4 +18,13 @@ client.on('message', message => {
 
 });
 
+client.on('message', message => {
+    if (message.content.startsWith(prefix+"help")) {
+        let ping = Math.floor(message.client.ws.ping);
+        message.channel.send('**AÚN ESTOY EN DESARROLLO, PROGRAMADORES TRABAJANDO EN MI**'); 
+
+    }
+
+});
+
 client.login(process.env.TOKEN);  
