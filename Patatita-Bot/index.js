@@ -27,4 +27,14 @@ client.on('message', message => {
 
 });
 
+client.on('message', message => {
+    if (message.content.startsWith(prefix+"tiktok")) {
+        let ping = Math.floor(message.client.ws.ping);
+        message.channel.send('El tik tok de Melany lo puedes encontrar acá: https://www.tiktok.com/@mel_any05?lang=es'); 
+
+    }
+
+});
+
+
 client.login(process.env.TOKEN);  
