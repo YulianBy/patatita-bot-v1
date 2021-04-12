@@ -12,7 +12,7 @@ client.on('ready', () => {
 client.on('message', message => {
     if (message.content.startsWith(prefix+"ping")) {
         let ping = Math.floor(message.client.ws.ping);
-        message.channel.send(':ping_pong: `'+ping+' ms.` desde mi portal de desarrollo.'); 
+        message.channel.send(':ping_pong: `'+ping+' ms.` desde portal de desarrollo.'); 
 
     }
 
