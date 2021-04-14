@@ -43,7 +43,7 @@ client.on('message', message => {
     }
 
     if(command === '8ball'){
-        var rpts = ["Sí", "No", "¿Por qué?", "Por favor", "Tal vez", "No sé", "Definitivamente", " ¡Claro! "," Sí "," No "," Por supuesto! "," Por supuesto que no "];
+        var rpts = ["Sí", "No", "¿Por qué?", "Por favor", "Tal vez", "No sé", "Definitivamente", " ¡Claro! "," Sí ", " Por supuesto! "," Por supuesto que no "];
         if (!texto) return message.reply(`Escribe una pregunta.`);
         message.channel.send('Tu Pregunta es: `'+texto+'` \nMi respuesta es: `'+ rpts[Math.floor(Math.random() * rpts.length)]+'`');
     
@@ -59,17 +59,14 @@ client.on('message', message => {
     } else if (message.content.startsWith(prefix+"servidor")) {
         message.channel.send(`Nombre del Servidor: ${message.guild.name}\nEl Numero de Miembros es: ${message.guild.memberCount}`);
 
-    } else if (message.content.startsWith(prefix+"mi-info")) {
-        message.channel.send(`Tu Nombre de Usuario es: ${message.author.username}\nTu ID Es: ${message.author.id}`);
-
-    } else if (message.content.startsWith(prefix+"tiktok")) {
+    }  else if (message.content.startsWith(prefix+"tiktok")) {
         message.channel.send("Puedes encontrar a Mel en tiktok acá: https://www.tiktok.com/@mel_any05?lang=es%22");
     
     } else if (message.content.startsWith(prefix+"comandos")) {
         message.channel.send({embed: {
             color: 3447003,
             title: "Mis comandos:",
-            description: "Hola! Estos son mis comandos actuales:\n 1. help \n 2. ping \n 3. tiktok \n 4. mi-info \n 5. servidor",
+            description: "Hola! Estos son mis comandos actuales:\n 1. help \n 2. ping \n 3. tiktok \n 4. mi-info \n 5. servidor\n 6. status\n 7. owners\n 8. 8ball\n 9. server",
             footer: {
                 text: 'Recuerda que mi prefix es: **p!**',
             },
@@ -88,6 +85,7 @@ client.on('message', message => {
             title: "Bot Status",
             description: `Hola!\n**Actualmente me encuentro en:** ${client.guilds.cache.size} **Servers**\n**Viendo** ${client.channels.cache.size} **Canales**\n**Con** ${client.users.cache.size} **Personas**\n*Bot en Fase Beta*`,
         }})
+    
     } 
     
 });
